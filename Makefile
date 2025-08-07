@@ -159,16 +159,16 @@ major:  ## bump a major version
 ########
 .PHONY: dist-py-wheel dist-py-sdist dist-rs dist-check dist publish
 
-dist-py-wheel:  # build python wheel
+dist-py-wheel:  ## build python wheel
 	python -m cibuildwheel --output-dir dist
 
-dist-py-sdist:  # build python sdist
+dist-py-sdist:  ## build python sdist
 	python -m build --sdist -o dist
 
 dist-js:  # build js dists
 	cd js; pnpm pack
 
-dist-rs:  # build rust dists
+dist-rs:  ## build rust dists
 	make -C rust dist
 
 dist-check:  ## run python dist checker with twine
@@ -176,7 +176,7 @@ dist-check:  ## run python dist checker with twine
 
 dist: clean build dist-rs dist-js dist-py-wheel dist-py-sdist dist-check  ## build all dists
 
-publish: dist  # publish python assets
+publish: dist  ## publish python assets
 
 #########
 # CLEAN #
