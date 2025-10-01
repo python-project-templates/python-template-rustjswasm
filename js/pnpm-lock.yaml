@@ -18,8 +18,8 @@ importers:
         specifier: ^0.1.17
         version: 0.1.17
       cpy:
-        specifier: ^11.1.0
-        version: 11.1.0
+        specifier: ^12.0.1
+        version: 12.0.1
       esbuild:
         specifier: ^0.25.5
         version: 0.25.9
@@ -334,9 +334,9 @@ packages:
     resolution: {integrity: sha512-utCYNzRSQIZNPIcGZdQc92UVJYAhtGAteCFg0yRaFm8f0P+CPtyGyHXJcGXnffjCybUCEx3FQ2G7U3/o9eIkVQ==}
     engines: {node: '>= 0.4.0'}
 
-  cpy@11.1.0:
-    resolution: {integrity: sha512-QGHetPSSuprVs+lJmMDcivvrBwTKASzXQ5qxFvRC2RFESjjod71bDvFvhxTjDgkNjrrb72AI6JPjfYwxrIy33A==}
-    engines: {node: '>=18'}
+  cpy@12.0.1:
+    resolution: {integrity: sha512-hCnNla4AB27lUncMuO7KFjge0u0C5R74iKMBOajKOMB9ONGXcIek314ZTpxg16BuNYRTjPz7UW3tPXgJVLxUww==}
+    engines: {node: '>=20'}
 
   cross-spawn@6.0.6:
     resolution: {integrity: sha512-VqCUuhcd1iB+dsv8gxPttb5iZh/D0iubSP21g36KXdEuf6I5JiioesUVjpCdHV9MZRUfVFlvwtIUyPfxo5trtw==}
@@ -1388,7 +1388,7 @@ snapshots:
 
   corser@2.0.1: {}
 
-  cpy@11.1.0:
+  cpy@12.0.1:
     dependencies:
       copy-file: 11.1.0
       globby: 14.1.0
