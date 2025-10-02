@@ -13,4 +13,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 python_template_rust = { path = "../rust", version = "*" }
-wasm-bindgen = "0.2.84"
+wasm-bindgen = "0.2.104"
