@@ -30,8 +30,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.9"]
-        cibuildwheel: ["cp39"]
+        python-version: ["3.11"]
+        cibuildwheel: ["cp311"]
         node-version: [20.x]
 
     steps:
