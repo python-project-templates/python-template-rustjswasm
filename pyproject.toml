@@ -38,17 +38,17 @@ dependencies = []
 develop = [
     "build",
     "bump-my-version",
-    "check-manifest",
+    "check-dist",
     "cibuildwheel",
-    "codespell>=2.4,<2.5",
+    "codespell",
     "hatch-js",
     "hatch-rs",
     "hatchling",
-    "mdformat>=0.7.22,<1.1",
+    "mdformat",
     "mdformat-tables>=1",
     "pytest",
     "pytest-cov",
-    "ruff>=0.9,<0.15",
+    "ruff",
     "twine",
     "ty",
     "uv",
@@ -96,21 +96,6 @@ replace = 'version = "{new_version}"'
 filename = "rust/Cargo.toml"
 search = 'version = "{current_version}"'
 replace = 'version = "{new_version}"'
-
-[tool.check-manifest]
-ignore = [
-    ".copier-answers.yaml",
-    "Cargo.toml",
-    "Cargo.lock",
-    "js/pnpm-lock.yaml",
-    "Makefile",
-    ".vscode/*",
-    "python_template_rust/extension/**/*",
-    "docs/**/*",
-    "js/**/*",
-    "rust/**/*",
-    "src/**/*",
-]
 
 [tool.cibuildwheel]
 build = "cp310-*"
@@ -164,16 +149,14 @@ path = "."
 [tool.hatch.build.targets.sdist]
 packages = [
     "python_template_rust",
-]
-include = [
     "js",
     "rust",
-    "src",
     "Cargo.toml",
     "Cargo.lock",
 ]
 exclude = [
     "js/node_modules",
+    "rust/Makefile",
     "target",
 ]
 
@@ -184,7 +167,6 @@ packages = [
 exclude = [
     "js",
     "rust",
-    "src",
 ]
 
 [tool.pytest.ini_options]
