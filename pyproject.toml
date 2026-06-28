@@ -134,6 +134,17 @@ exclude_also = [
 ignore_errors = true
 fail_under = 50
 
+[tool.hatch.build]
+artifacts = [
+    "python_template_rust/*.dll",
+    "python_template_rust/*.dylib",
+    "python_template_rust/*.so",
+    "python_template_rust/extension",
+]
+
+[tool.hatch.build.sources]
+src = "/"
+
 [tool.hatch.build.hooks.hatch-js]
 path = "js"
 build_cmd = "build"
@@ -157,6 +168,11 @@ packages = [
     "Cargo.lock",
 ]
 exclude = [
+    "python_template_rust/*.dll",
+    "python_template_rust/*.dylib",
+    "python_template_rust/*.so",
+    "python_template_rust/extension",
+    "js/dist",
     "js/node_modules",
     "rust/Makefile",
     "target",
